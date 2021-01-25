@@ -96,7 +96,7 @@ function validate(){ //te la returnsra el create
     var v_HP=document.getElementById('HP').value;
     var v_Km=document.getElementById('Km').value;
     var v_Anyo_produccion=document.getElementById('Anyo_produccion').value;
-    var v_tipo=document.getElementsByName('tipo');
+    var v_tipo=document.getElementsById('tipo');      /// aci antes estava en get elements byName pero esta canviat 
     var v_color=document.getElementById('color').value;
     var v_precio=document.getElementById('precio').value;
 

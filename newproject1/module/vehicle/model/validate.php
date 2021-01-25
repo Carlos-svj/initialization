@@ -45,6 +45,7 @@
             return true;
         }
     }
+    
     function validate_color($texto){
         $reg = "/^[a-zA-Z]*$/";
         return preg_match($reg,$texto);

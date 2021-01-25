@@ -37,7 +37,8 @@
 
                 $check=validate();
 
-                 echo '<script language="javascript">alert("hola post user ")</script>';
+                // echo '<script language="javascript">alert("hola post user ")</script>';
+
                 if ($check){
                 
                     $_SESSION['vehicle']=$_POST;
@@ -63,7 +64,7 @@
             }
             include("module/vehicle/view/create_vehicle.php");
             break;
-            
+        /*     
         case 'update';
             include("module/vehicle/model/validate.php");
             //primer el echo dollar get  id, el formulari, fer validacio en javascript despres php
@@ -145,7 +146,7 @@
         			$callback = 'index.php?page=503';
 			        die('<script>window.location.href="'.$callback .'";</script>');
         		}
-            }
+            } */
             
             include("module/vehicle/view/delete_vehicle.php");
             break;
