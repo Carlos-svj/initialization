@@ -63,7 +63,7 @@
             
             <tr>
                 <td>Anyo de produccion: </td>
-                <td><input id="fecha" type="text" name="Anyo_produccion" placeholder="Anyo de produccion" value=""/></td>
+                <td><input id="Anyo_produccion" type="text" name="Anyo_produccion" placeholder="Anyo de produccion" value=""/></td>
                 <td><font color="red">
                     <span id="error_Anyo_produccion" class="error">
                         <?php
