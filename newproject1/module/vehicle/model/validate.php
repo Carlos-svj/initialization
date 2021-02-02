@@ -1,6 +1,12 @@
 
 <?php
+
+    
+
      function validate_id_vehicle($texto){
+         
+        $sql = "SELECT * FROM vehicles";
+
         $reg="/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/";
         return preg_match($reg,$texto);
     }
@@ -16,7 +22,7 @@
     }
     
     function validate_HP($texto){
-        $reg="/^[0-9]{2,3}$/";
+        $reg="/^[0-9]{3,4}$/";
         return preg_match($reg,$texto);
     }
 
@@ -24,7 +30,7 @@
         $reg="/^[0-9]{2,3}$/";
         return preg_match($reg,$texto);
     }
-    
+     
     function validate_Anyo_produccion($texto){
         if(empty($texto)){
             return false;
@@ -38,13 +44,13 @@
         return preg_match($reg,$texto);
     } */
     
-    function validate_tipo($texto){
+   /*  function validate_tipo($texto){
         if(!isset($texto) || empty($texto)){
             return false;
         }else{
             return true;
         }
-    }
+    } */
     
     function validate_color($texto){
         $reg = "/^[a-zA-Z]*$/";
@@ -90,6 +96,8 @@
     
     function validate(){
 
+         /* echo 'hola validate php';  */
+
        // echo '<script language="javascript">alert("hola post user ")</script>';
 
         $check=true;
@@ -100,8 +108,8 @@
         $v_HP=$_POST['HP'];
         $v_Km=$_POST['Km'];
         $v_Anyo_produccion=$_POST['Anyo_produccion'];
-        $v_tipo=$_POST['tipo'];
-        $v_color=$_POST['color'];
+/*         $v_tipo=$_POST['tipo'];
+ */        $v_color=$_POST['color'];
         $v_precio=$_POST['precio'];
     
         
@@ -111,8 +119,8 @@
         $r_HP=validate_HP('v_HP');
         $r_Km=validate_Km('v_Km');
         $r_Anyo_produccion=validate_Anyo_produccion('v_Anyo_produccion');
-        $r_tipo=validate_tipo('v_tipo');
-        $r_color=validate_color('v_color');
+/*         $r_tipo=validate_tipo('v_tipo');
+ */        $r_color=validate_color('v_color');
         $r_precio=validate_precio('v_precio');
         
         if($r_id_vehicle !== 1){
@@ -151,12 +159,12 @@
         }else{
             $error_Anyo_produccion = "";
         }
-        if($r_tipo !== 1){
+      /*   if($r_tipo !== 1){
             $error_tipo = " * La tipo de vehiculo no es valido";
             $check=false;
         }else{
             $error_tipo = "";
-        }
+        } */
         if(!$r_color){
             $error_color = " * No has seleccionado ningun color";
             $check=false;

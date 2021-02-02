@@ -1,7 +1,6 @@
-function validate_id_vehicle(texto){
+function validate_id_vehicle(texto){  //mira avore si esta ple yau 
     if (texto.length > 0){
-        var reg = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
-        return reg.test(texto);
+        return true;
     }
     return false;
 }
@@ -24,7 +23,7 @@ function validate_modelo(texto){
 
 function validate_HP(texto){
     if (texto.length > 0){
-        var reg=/^[0-9]{2,3}$/;
+        var reg=/^[0-9]{3,4}$/;
         return reg.test(texto);
     }
     return false;
@@ -46,7 +45,7 @@ function validate_Anyo_produccion(texto){
     return false;
 }
 
-function validate_tipo(texto){ //si es coxe o moto
+/* function validate_tipo(texto){ //si es coxe o moto
     var i;
     var ok=0;
     for(i=0; i<texto.length;i++){
@@ -61,7 +60,7 @@ function validate_tipo(texto){ //si es coxe o moto
     if(ok==0){
         return false;
     }
-}
+} */
 
 function validate_color(texto){
     if (texto.length > 0){
@@ -85,8 +84,11 @@ function validate_observaciones(texto){
 }
 */
 function validate(){ //te la returnsra el create
+
     /* console.log('hola validate js');
      return true;  */
+
+     
 
     var check=true;
     
@@ -101,23 +103,24 @@ function validate(){ //te la returnsra el create
     var v_precio=document.getElementById('precio').value;
 
     
-    var r_id_vehicle=validate_vehicle(v_id_vehicle);
+     var r_id_vehicle=validate_id_vehicle(v_id_vehicle); 
     var r_marca=validate_marca(v_marca);
     var r_modelo=validate_modelo(v_modelo);
     var r_HP=validate_HP(v_HP);
     var r_Km=validate_Km(v_Km);
     var r_Anyo_produccion=validate_Anyo_produccion(v_Anyo_produccion);
-    var r_tipo=validate_tipo(v_tipo);
-    var r_color=validate_color(v_color);
-    //var r_observaciones=validate_observaciones(v_observaciones);
+/*     var r_tipo=validate_tipo(v_tipo);
+ */    var r_color=validate_color(v_color);
     var r_precio=validate_precio(v_precio);
+    
+
     
     if(!r_id_vehicle){
         document.getElementById('error_id_vehicle').innerHTML = " * El vehiculo introducido no es valido";
         check=false;
     }else{
         document.getElementById('error_id_vehicle').innerHTML = "";
-    }
+    } 
     if(!r_marca){
         document.getElementById('error_marca').innerHTML = " * La marca del vehiculo no es valida ";
         check=false;
@@ -148,12 +151,12 @@ function validate(){ //te la returnsra el create
     }else{
         document.getElementById('error_Anyo_produccion').innerHTML = "";
     }
-    if(!r_tipo){
+    /* if(!r_tipo){
         document.getElementByName('error_tipo').innerHTML = " * El tipo de vehiculo introducido no es valida";
         check=false;
     }else{
         document.getElementByName('error_tipo').innerHTML = "";
-    }
+    } */
     if(!r_color){
         document.getElementById('error_color').innerHTML = " * No has seleccionado ningun color";
         check=false;
@@ -167,5 +170,9 @@ function validate(){ //te la returnsra el create
         document.getElementById('error_precio').innerHTML = "";
     }
     
+   /*  console.log('hola validate js');
+    return true; */
+
     return check;
+     
 }

@@ -73,7 +73,7 @@
                 </font></font></td>
             </tr>
             
-            <tr>
+            <!-- <tr>
                 <td>Tipo: </td>
                 <td><input type="radio" id="tipo" name="tipo" placeholder="tipo" value="Coche"/>Coche
                     <input type="radio" id="tipo" name="tipo" placeholder="tipo" value="Moto"/>Moto</td>
@@ -84,7 +84,7 @@
                         ?>
                     </span>
                 </font></font></td>
-            </tr>
+            </tr> -->
             
            
             <tr>

@@ -9,8 +9,8 @@
                 $daovehicle = new DAOVehicle();
             	$rdo = $daovehicle->select_all_vehicle();
             }catch (Exception $e){
-              /*   $callback = 'index.php?page=503';
-			    die('<script>window.location.href="'.$callback .'";</script>'); */
+                $callback = 'index.php?page=503';
+			    die('<script>window.location.href="'.$callback .'";</script>');
             }
 /*             echo $rdo;
  */
@@ -22,7 +22,7 @@
     		}
             break;
             
-           /*  $data = 'hola DAO user';
+            /* $data = 'hola DAO user';
              die('script>console.log('.json_encode($data).');<script>'); */
              
         case 'create';
