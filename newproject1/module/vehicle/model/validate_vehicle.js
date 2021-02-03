@@ -86,7 +86,8 @@ function validate_observaciones(texto){
 function validate(){ //te la returnsra el create
 
     /* console.log('hola validate js');
-     return true;  */
+    
+     return true;  */ 
 
      
 

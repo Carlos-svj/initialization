@@ -1,34 +1,49 @@
 
 <?php
-
-    
-
-     function validate_id_vehicle($texto){
+        function validate_id_vehicle($texto){
+            if(empty($texto)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+    /*  function validate_id_vehicle($texto){
          
         $sql = "SELECT * FROM vehicles";
 
         $reg="/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/";
         return preg_match($reg,$texto);
-    }
+    } */
     
     function validate_marca($texto){
-        $reg = "/^[a-zA-Z]*$/";
-        return preg_match($reg,$texto);
+        if(empty($texto)){
+            return false;
+        }else{
+            return true;
+        }
     }
-    
     function validate_modelo($texto){
-        $reg="/^[a-zA-Z]*$/";
-        return preg_match($reg,$texto);
+        if(empty($texto)){
+            return false;
+        }else{
+            return true;
+        }
     }
     
-    function validate_HP($texto){
-        $reg="/^[0-9]{3,4}$/";
-        return preg_match($reg,$texto);
+     function validate_HP($texto){
+        if(empty($texto)){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     function validate_Km($texto){
-        $reg="/^[0-9]{2,3}$/";
-        return preg_match($reg,$texto);
+        if(empty($texto)){
+            return false;
+        }else{
+            return true;
+        }
     }
      
     function validate_Anyo_produccion($texto){
@@ -39,38 +54,17 @@
         }
     }
     
-    /* function validate_Anyo_produccion($texto){
-        $reg="/[0-9]{1,2}$/";
-        return preg_match($reg,$texto);
-    } */
     
-   /*  function validate_tipo($texto){
-        if(!isset($texto) || empty($texto)){
+    
+    function validate_color($texto){
+        if(empty($texto)){
             return false;
         }else{
             return true;
         }
-    } */
-    
-    function validate_color($texto){
-        $reg = "/^[a-zA-Z]*$/";
-        return preg_match($reg,$texto);
     }
 
     function validate_precio($texto){
-        $reg = "/^[0-9]{6}$/";
-        return preg_match($reg,$texto);
-    }
-    
-    /* function validate_color($texto){
-        if(!isset($texto) || empty($texto)){
-            return false;
-        }else{
-            return true;
-        }
-    }
-    
-    function validate_precio($texto){
         if(empty($texto)){
             return false;
         }else{
@@ -78,25 +72,11 @@
         }
     }
     
-    function validate_aficion($texto){
-        if(!isset($texto) || empty($texto)){
-            return false;
-        }else{
-            return true;
-        }
-         
-    function validate_fecha($texto){
-        if(empty($texto)){
-            return false;
-        }else{
-            return true;
-        }
-    }
-    } */ 
+   
     
     function validate(){
 
-         /* echo 'hola validate php';  */
+         /*  echo 'hola validate php'; */  
 
        // echo '<script language="javascript">alert("hola post user ")</script>';
 

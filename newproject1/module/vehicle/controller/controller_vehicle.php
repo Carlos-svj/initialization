@@ -34,10 +34,11 @@
             $check = true;
             //
             if (isset($_POST['create'])){
-
+                // echo '<script language="javascript">alert("hola post user ")</script>';
+                /* $data = 'hola create post user';
+                die('<script<console.log('.json_encode($data).');</script>'); */
                 $check=validate();
 
-                // echo '<script language="javascript">alert("hola post user ")</script>';
 
                 if ($check){
                 
@@ -64,7 +65,7 @@
             }
             include("module/vehicle/view/create_vehicle.php");
             break;
-        /*     
+            
         case 'update';
             include("module/vehicle/model/validate.php");
             //primer el echo dollar get  id, el formulari, fer validacio en javascript despres php
@@ -97,7 +98,7 @@
             try{
                 $daovehicle = new DAOVehicle();
             	$rdo = $daovehicle->select_vehicle($_GET['id']);
-            	$daovehicle=get_object_vars($rdo);
+            	$vehicle=get_object_vars($rdo);
             }catch (Exception $e){
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');
@@ -112,10 +113,12 @@
             break;
             
         case 'read';
+         /* $data = 'hola read user';
+             die('script>console.log('.json_encode($data).');<script>'); */ 
             try{
                 $daovehicle = new DAOVehicle();
             	$rdo = $daovehicle->select_vehicle($_GET['id']);
-            	$daovehicle=get_object_vars($rdo);
+            	$vehicle=get_object_vars($rdo);
             }catch (Exception $e){
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');
@@ -146,7 +149,7 @@
         			$callback = 'index.php?page=503';
 			        die('<script>window.location.href="'.$callback .'";</script>');
         		}
-            } */
+            } 
             
             include("module/vehicle/view/delete_vehicle.php");
             break;
