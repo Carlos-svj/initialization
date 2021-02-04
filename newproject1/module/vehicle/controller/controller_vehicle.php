@@ -12,17 +12,18 @@
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');
             }
-/*             echo $rdo;
- */
+
+            /*  echo $rdo; */
+ 
             if($rdo){ 
                 include("module/vehicle/view/list_vehicle.php");////////////////////////////////////////////////////////
     		}else{
-                /* $callback = 'index.php?page=503';
-			    die('<script>window.location.href="'.$callback .'";</script>'); */
+                $callback = 'index.php?page=503';
+			    die('<script>window.location.href="'.$callback .'";</script>');
     		}
             break;
             
-            /* $data = 'hola DAO user';
+           /*  $data = 'hola DAO user';
              die('script>console.log('.json_encode($data).');<script>'); */
              
         case 'create';
@@ -37,16 +38,21 @@
                 // echo '<script language="javascript">alert("hola post user ")</script>';
                 /* $data = 'hola create post user';
                 die('<script<console.log('.json_encode($data).');</script>'); */
-                $check=validate();
 
+                // $check=validate();
 
+                $check = true;
                 if ($check){
+                
                 
                     $_SESSION['vehicle']=$_POST;
                     try{
+
                         $daovehicle = new DAOVehicle();
-    		            $rdo = $daovehicle->insert_vehicle($_POST);
+                        $rdo = $daovehicle->insert_vehicle($_POST);
+                        
                     }catch (Exception $e){
+
                         $callback = 'index.php?page=503';
         			    die('<script>window.location.href="'.$callback .'";</script>');
                     }
@@ -54,7 +60,8 @@
 		            if($rdo){
             			echo '<script language="javascript">alert("Registrado en la base de datos correctamente")</script>';
             			$callback = 'index.php?page=controller_vehicle&op=list';
-        			    die('<script>window.location.href="'.$callback .'";</script>');
+                        die('<script>window.location.href="'.$callback .'";</script>');
+                        
             		}else{
                         echo '<script language="javascript">alert("error DAO")</script>';
             			$callback = 'index.php?page=503';

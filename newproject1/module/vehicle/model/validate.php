@@ -78,8 +78,6 @@
 
          /*  echo 'hola validate php'; */  
 
-       // echo '<script language="javascript">alert("hola post user ")</script>';
-
         $check=true;
         
          $v_id_vehicle=$_POST['id_vehicle'];
@@ -158,5 +156,5 @@
             $error_precio = "";
         }
          
-        //return $check;
+        return $check;
     }

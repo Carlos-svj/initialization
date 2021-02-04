@@ -6,101 +6,75 @@
             <td>id_vehicle: </td>
             <td>
                 <?php
-                    echo $user[user];
+                    echo $vehicle['id_vehicle'];
                 ?>
             </td>
         </tr>
     
         <tr>
-            <td>Contraseña: </td>
+            <td>: </td>
             <td>
                 <?php
-                    echo $user['pass'];
+                    echo $vehicle['marca'];
                 ?>
             </td>
         </tr>
         
         <tr>
-            <td>Nombre: </td>
+            <td>: </td>
             <td>
                 <?php
-                    echo $user['name'];
+                    echo $vehicle['modelo'];
                 ?>
             </td>
         </tr>
         
         <tr>
-            <td>DNI: </td>
+            <td>: </td>
             <td>
                 <?php
-                    echo $user['dni'];
+                    echo $vehicle['HP'];
                 ?>
             </td>
         </tr>
         
         <tr>
-            <td>Sexo: </td>
+            <td>: </td>
             <td>
                 <?php
-                    echo $user['sex'];
+                    echo $vehicle['Km'];
                 ?>
             </td>
         </tr>
         
         <tr>
-            <td>Fecha de nacimiento: </td>
+            <td> : </td>
             <td>
                 <?php
-                    echo $user['birthdate'];
+                    echo $vehicle['Anyo_produccion'];
                 ?>
             </td>
         </tr>
         
         <tr>
-            <td>Edad: </td>
+            <td>: </td>
             <td>
                 <?php
-                    echo $user['age'];
+                    echo $vehicle['color'];
                 ?>
             </td>
             
         </tr>
         
         <tr>
-            <td>Pais: </td>
+            <td>precio: </td>
             <td>
                 <?php
-                    echo $user['country'];
+                    echo $vehicle['precio'];
                 ?>
             </td>
         </tr>
         
-        <tr>
-            <td>Idioma: </td>
-            <td>
-                <?php
-                    echo $user['language'];
-                ?>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Observaciones: </td>
-            <td>
-                <?php
-                    echo $user['comment'];
-                ?>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>Aficiones: </td>
-            <td>
-                <?php
-                    echo $user['hobby'];
-                ?>
-            </td>
-        </tr>
     </table>
     </p>
     <p><a href="index.php?page=controller_vehicle&op=list">Volver</a></p>
