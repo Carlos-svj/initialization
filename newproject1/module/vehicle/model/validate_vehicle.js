@@ -68,13 +68,15 @@ function validate_color(texto){
     }
     return false;
 }
-function validate_precio(texto){
+function validate_precio(texto){   
     if (texto.length > 0){
         var reg= /^[0-9]+$/;
         return reg.test(texto);
     }
     return false;
 }
+
+
 /*
 function validate_observaciones(texto){
     if (texto.length > 0){

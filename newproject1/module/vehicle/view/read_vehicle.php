@@ -3,7 +3,7 @@
     <p>
     <table border='2'>
         <tr>
-            <td>id_vehicle: </td>
+            <td>Código de vehiculo: </td>
             <td>
                 <?php
                     echo $vehicle['id_vehicle'];
@@ -12,7 +12,7 @@
         </tr>
     
         <tr>
-            <td>: </td>
+            <td>Marca: </td>
             <td>
                 <?php
                     echo $vehicle['marca'];
@@ -21,7 +21,7 @@
         </tr>
         
         <tr>
-            <td>: </td>
+            <td>Modelo: </td>
             <td>
                 <?php
                     echo $vehicle['modelo'];
@@ -30,7 +30,7 @@
         </tr>
         
         <tr>
-            <td>: </td>
+            <td> Potencia: </td>
             <td>
                 <?php
                     echo $vehicle['HP'];
@@ -39,7 +39,7 @@
         </tr>
         
         <tr>
-            <td>: </td>
+            <td>Kilometraje: </td>
             <td>
                 <?php
                     echo $vehicle['Km'];
@@ -48,7 +48,7 @@
         </tr>
         
         <tr>
-            <td> : </td>
+            <td> Anyo de produccion: </td>
             <td>
                 <?php
                     echo $vehicle['Anyo_produccion'];
@@ -57,7 +57,7 @@
         </tr>
         
         <tr>
-            <td>: </td>
+            <td>Color: </td>
             <td>
                 <?php
                     echo $vehicle['color'];
@@ -67,7 +67,7 @@
         </tr>
         
         <tr>
-            <td>precio: </td>
+            <td>Precio: </td>
             <td>
                 <?php
                     echo $vehicle['precio'];
