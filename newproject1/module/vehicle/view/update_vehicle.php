@@ -9,7 +9,7 @@
                     <font color="red">
                         <span id="error_id_vehicle" class="error">
                             <?php
-                            //  echo "$error_id_vehicle";
+                            echo "$error_id_vehicle";
                             ?>
                         </span>
                 </td>
@@ -22,7 +22,7 @@
                     <font color="red">
                         <span id="error_marca" class="error">
                             <?php
-                            // echo "$error_marca";
+                            echo "$error_marca";
                             ?>
                         </span>
                 </td>
@@ -35,7 +35,7 @@
                     <font color="red">
                         <span id="error_modelo" class="error">
                             <?php
-                            // echo "$error_modelo";
+                            echo "$error_modelo";
                             ?>
                         </span>
                 </td>
@@ -48,7 +48,7 @@
                     <font color="red">
                         <span id="error_HP" class="error">
                             <?php
-                            // echo "$error_HP";
+                            echo "$error_HP";
                             ?>
                         </span>
                 </td>
@@ -62,7 +62,7 @@
                     <font color="red">
                         <span id="error_Km" class="error">
                             <?php
-                            // echo "$error_Km";
+                            echo "$error_Km";
                             ?>
                         </span>
                 </td>
@@ -75,7 +75,7 @@
                     <font color="red">
                         <span id="error_Anyo_produccion" class="error">
                             <?php
-                            // echo "$error_Anyo_produccion";
+                            echo "$error_Anyo_produccion";
                             ?>
                         </span>
                 </td>
@@ -91,7 +91,7 @@
                     <font color="red">
                         <span id="error_color" class="error">
                             <?php
-                            // echo "$error_color";
+                            echo "$error_color";
                             ?>
                         </span>
                 </td>
@@ -104,7 +104,7 @@
                     <font color="red">
                         <span id="error_color" class="error">
                             <?php
-                            // echo "$error_precio";
+                            echo "$error_precio";
                             ?>
                         </span>
                 </td>

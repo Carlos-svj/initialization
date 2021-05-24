@@ -1,3 +1,7 @@
+// YE CANVIAR O EL MIRES LO DES LES EXPRESSIONES REGULARES 
+// O T'EN VAS A FER PUÑETES VA CHE ANIMAT 
+
+//
 function validate_id_vehicle(texto){  //mira avore si esta ple yau 
     if (texto.length > 0){
         return true;
@@ -5,7 +9,7 @@ function validate_id_vehicle(texto){  //mira avore si esta ple yau
     return false;
 }
 
-function validate_marca(texto){
+function validate_marca(texto){ //açÔ s'en te que anar fora 
     if (texto.length > 0){
         var reg=/^[a-zA-Z]*$/;
         return reg.test(texto);
@@ -13,10 +17,9 @@ function validate_marca(texto){
     return false;
 }
 
-function validate_modelo(texto){
+function validate_modelo(texto){  //mira avore si esta ple yau 
     if (texto.length > 0){
-        var reg=/^[a-zA-Z]*$/;
-        return reg.test(texto);
+        return true;
     }
     return false;
 }
@@ -37,10 +40,9 @@ function validate_Km(texto){
     return false;
 }
 
-function validate_Anyo_produccion(texto){
+function validate_Anyo_produccion(texto){  //mira avore si esta ple yau 
     if (texto.length > 0){
-        var reg=/^([012][1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
-        return reg.test(texto);
+        return true;
     }
     return false;
 }
@@ -68,14 +70,27 @@ function validate_color(texto){
     }
     return false;
 }
-function validate_precio(texto){   
+// function validate_precio(texto){   
+//     if (texto.length > 0){
+//         var reg= /^[0-9]+$/;
+//         return reg.test(texto);
+//     }
+//     return false;
+// }
+
+function validate_precio(texto) { //perque puñeta em trau 250000.00 aixin ane el zero 
     if (texto.length > 0){
-        var reg= /^[0-9]+$/;
-        return reg.test(texto);
+        return true;
     }
     return false;
+    
+    // var RE = /^\d*\.?\d*$/;
+    // if (RE.test(valor)) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 }
-
 
 /*
 function validate_observaciones(texto){
@@ -91,8 +106,6 @@ function validate(){ //te la returnsra el create
     
      return true;  */ 
 
-     
-
     var check=true;
     
     var v_id_vehicle=document.getElementById('id_vehicle').value;
@@ -101,25 +114,25 @@ function validate(){ //te la returnsra el create
     var v_HP=document.getElementById('HP').value;
     var v_Km=document.getElementById('Km').value;
     var v_Anyo_produccion=document.getElementById('Anyo_produccion').value; 
-     var v_tipo=document.getElementsByName('tipo');      /// aci antes estava en get elements byName pero esta canviat 
-     var v_color=document.getElementById('color').value;
+    // var v_tipo=document.getElementsByName('tipo');      /// aci antes estava en get elements byName pero esta canviat 
+    var v_color=document.getElementById('color').value;
     var v_precio=document.getElementById('precio').value;
 
     
-     var r_id_vehicle=validate_id_vehicle(v_id_vehicle); 
+    var r_id_vehicle=validate_id_vehicle(v_id_vehicle); 
     var r_marca=validate_marca(v_marca);
     var r_modelo=validate_modelo(v_modelo);
     var r_HP=validate_HP(v_HP);
     var r_Km=validate_Km(v_Km);
     var r_Anyo_produccion=validate_Anyo_produccion(v_Anyo_produccion);
-/*     var r_tipo=validate_tipo(v_tipo);
- */    var r_color=validate_color(v_color);
+    var r_color=validate_color(v_color);
     var r_precio=validate_precio(v_precio);
     
 
     
     if(!r_id_vehicle){
         document.getElementById('error_id_vehicle').innerHTML = " * El vehiculo introducido no es valido";
+        //per parar return false
         check=false;
     }else{
         document.getElementById('error_id_vehicle').innerHTML = "";
@@ -173,8 +186,8 @@ function validate(){ //te la returnsra el create
         document.getElementById('error_precio').innerHTML = "";
     }
     
-   /*  console.log('hola validate js');
-    return true; */
+//    console.log('hola validate js');
+//     return true; 
 
     return check;
      

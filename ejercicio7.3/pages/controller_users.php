@@ -16,7 +16,7 @@
 							'date_birthday' => strtoupper($result['datos']['date_birthday'])
 						);
 			//debug($arrArgument);
-			$mensaje="Su registro se ha efectuado correctamente para finalizar compruebe que ha recibido un correo de validacion y siga las instrucciones del correo";
+			$mensaje="Su registro se ha efectuado correctamente";
             
 			//redirigir a otra p�gina con los datos de $arrArgument y $mensaje
 			$_SESSION['user']=$arrArgument;

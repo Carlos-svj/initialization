@@ -16,7 +16,7 @@
             /*  echo $rdo; */
  
             if($rdo){ 
-                include("module/vehicle/view/list_vehicle.php");////////////////////////////////////////////////////////
+                include("module/vehicle/view/list_vehicle.php");
     		}else{
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');
@@ -36,7 +36,8 @@
             //
             if (isset($_POST['create'])){
                 // echo '<script language="javascript">alert("hola post user ")</script>';
-                /* $data = 'hola create post user';
+                /* $data = 'hola hola aci pete 
+                ';
                 die('<script<console.log('.json_encode($data).');</script>'); */
 
                 // $check=validate();
@@ -70,7 +71,7 @@
             		}
                 }
             }
-            include("module/vehicle/view/create_vehicle.php");
+            include("module/vehicle/view/create_vehicle.php"); 
             break;
             
         case 'update';
@@ -79,6 +80,8 @@
             $check = true;
             //antes de validar ho te que entrar al php
             if (isset($_POST['update'])){
+
+
                 $check=validate();//dins del validate echo hola vore si el torna true/false.
                 
                 if ($check){
@@ -86,18 +89,31 @@
                     try{
                         $daovehicle = new DAOVehicle();
     		            $rdo = $daovehicle->update_vehicle($_POST);
-                    }catch (Exception $e){
+                    }catch (Exception $e){ 
+                
                         $callback = 'index.php?page=503';
         			    die('<script>window.location.href="'.$callback .'";</script>');
+
+                        // echo '<script language="javascript">alert("hola pete aci en la linia aquees ")</script>';
+            			// $callback = 'index.php?page=controller_vehicle&op=list';
+                        // die('<script>window.location.href="'.$callback .'";</script>');
+
                     }
                     
 		            if($rdo){ 
             			echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
+
             			$callback = 'index.php?page=controller_vehicle&op=list';//redirecció
         			    die('<script>window.location.href="'.$callback .'";</script>');
+
             		}else{
-            			$callback = 'index.php?page=503';
-    			        die('<script>window.location.href="'.$callback .'";</script>');
+
+                        // $data = 'hola hola aci pete 
+                        // ';
+                die('<script<console.log('.json_encode($data).');</script>');
+
+            			// $callback = 'index.php?page=503';
+    			        // die('<script>window.location.href="'.$callback .'";</script>');
             		}
                 }
             }
@@ -106,6 +122,13 @@
                 $daovehicle = new DAOVehicle();
             	$rdo = $daovehicle->select_vehicle($_GET['id']);
             	$vehicle=get_object_vars($rdo);
+
+                //comrpovar si entra en el validate
+                
+                //i si tens el objecte 
+                // echo '<script language="javascript">alert("Hola controller update, tens el objecte ")</script>';
+
+
             }catch (Exception $e){
                 $callback = 'index.php?page=503';
 			    die('<script>window.location.href="'.$callback .'";</script>');
