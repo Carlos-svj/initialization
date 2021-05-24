@@ -1,5 +1,5 @@
 <div id="contenido">
-    <form autocomplete="on" method="post" name="aupdate_vehicle" id="update_vehicle" onsubmit="return validate();" action="index.php?page=controller_vehicle&op=update">
+    <form autocomplete="on" method="post" name="update_vehicle" id="update_vehicle">
         <h1>Modificar vehiculo</h1>
         <table border='0'>
             <tr>
@@ -8,8 +8,8 @@
                 <td>
                     <font color="red">
                         <span id="error_id_vehicle" class="error">
-                            <?php
-                            echo "$error_id_vehicle";
+                            <?php  
+                                echo $error_id_vehicle;
                             ?>
                         </span>
                 </td>
@@ -17,12 +17,12 @@
 
             <tr>
                 <td>marca: </td>
-                <td><input type="text" id="marca" name="marca" placeholder="marca" value="<?php echo $vehicle['marca']; ?>" /></td>
+                <td><input type="t  ext" id="marca" name="marca" placeholder="marca" value="<?php echo $vehicle['marca']; ?>" /></td>
                 <td>
                     <font color="red">
                         <span id="error_marca" class="error">
                             <?php
-                            echo "$error_marca";
+                            // echo "$error_marca";
                             ?>
                         </span>
                 </td>
@@ -35,7 +35,7 @@
                     <font color="red">
                         <span id="error_modelo" class="error">
                             <?php
-                            echo "$error_modelo";
+                            // echo "$error_modelo";
                             ?>
                         </span>
                 </td>
@@ -48,7 +48,7 @@
                     <font color="red">
                         <span id="error_HP" class="error">
                             <?php
-                            echo "$error_HP";
+                            // echo "$error_HP";
                             ?>
                         </span>
                 </td>
@@ -62,7 +62,7 @@
                     <font color="red">
                         <span id="error_Km" class="error">
                             <?php
-                            echo "$error_Km";
+                            // echo "$error_Km";
                             ?>
                         </span>
                 </td>
@@ -75,7 +75,7 @@
                     <font color="red">
                         <span id="error_Anyo_produccion" class="error">
                             <?php
-                            echo "$error_Anyo_produccion";
+                            // echo "$error_Anyo_produccion";
                             ?>
                         </span>
                 </td>
@@ -91,7 +91,7 @@
                     <font color="red">
                         <span id="error_color" class="error">
                             <?php
-                            echo "$error_color";
+                            // echo "$error_color";
                             ?>
                         </span>
                 </td>
@@ -102,16 +102,16 @@
                 <td><input type="text" id="precio" name="precio" placeholder="precio" value="<?php echo $vehicle['precio']; ?>" /></td>
                 <td>
                     <font color="red">
-                        <span id="error_color" class="error">
+                        <span id="error_precio" class="error">
                             <?php
-                            echo "$error_precio";
+                            // echo "$error_precio";
                             ?>
                         </span>
                 </td>
             </tr>
 
             <tr>
-                <td><input type="submit" name="update" id="update" /></td>
+                <td><input type="button" onclick="validate()" name="update" id="update" /></td>
                 <td align="right"><a href="index.php?page=controller_vehicle&op=list">Volver</a></td>
             </tr>
         </table>

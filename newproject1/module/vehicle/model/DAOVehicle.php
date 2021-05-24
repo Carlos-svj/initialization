@@ -61,22 +61,16 @@
         	$HP=$datos['HP'];
         	$Km=$datos['Km'];
         	$Anyo_produccion=$datos['Anyo_produccion'];
-/*         	$tipo=$datos[tipo];
- */			$color=$datos['color'];
+ 			$color=$datos['color'];
 			$precio=$datos['precio'];
-
-        	/* foreach ($datos[idioma] as $indice) {
-        	    $language=$language."$indice:";
-        	} */
-        	//$comment=$datos[observaciones];
-        	
-        	
+        	        	
         	$sql = " UPDATE vehicles SET marca='$marca', modelo='$modelo', HP='$HP', Km='$Km', Anyo_produccion='$Anyo_produccion',"
         		. " color='$color', precio='$precio'   WHERE id_vehicle='$id_vehicle'";
             
             $conexion = connect::con();
             $res = mysqli_query($conexion, $sql);
             connect::close($conexion);
+			echo $sql;
 			return $res;
 		}
 		

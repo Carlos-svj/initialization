@@ -114,7 +114,6 @@ function validate(){ //te la returnsra el create
     var v_HP=document.getElementById('HP').value;
     var v_Km=document.getElementById('Km').value;
     var v_Anyo_produccion=document.getElementById('Anyo_produccion').value; 
-    // var v_tipo=document.getElementsByName('tipo');      /// aci antes estava en get elements byName pero esta canviat 
     var v_color=document.getElementById('color').value;
     var v_precio=document.getElementById('precio').value;
 
@@ -167,12 +166,7 @@ function validate(){ //te la returnsra el create
     }else{
         document.getElementById('error_Anyo_produccion').innerHTML = "";
     }
-    /* if(!r_tipo){
-        document.getElementByName('error_tipo').innerHTML = " * El tipo de vehiculo introducido no es valida";
-        check=false;
-    }else{
-        document.getElementByName('error_tipo').innerHTML = "";
-    } */
+
     if(!r_color){
         document.getElementById('error_color').innerHTML = " * No has seleccionado ningun color";
         check=false;
@@ -188,7 +182,7 @@ function validate(){ //te la returnsra el create
     
 //    console.log('hola validate js');
 //     return true; 
-
-    return check;
+    document.update_vehicle.submit();
+    document.update_vehicle.action = "index.php?page=controller_vehicle&op=update";
      
 }
