@@ -88,16 +88,16 @@
         $v_observaciones=$_POST['observaciones'];
         $v_aficion=$_POST['aficion[]'];
         
-        $r_usuario=validate_usuario('v_usuario');
-        $r_password=validate_password('v_password');
-        $r_nombre=validate_nombre('v_nombre');
-        $r_DNI=validate_DNI('v_DNI');
-        $r_sexo=validate_sexo('v_sexo');
-        $r_fecha_nacimiento=validate_fecha('v_fecha_nacimiento');
-        $r_edad=validate_edad('v_edad');
-        $r_idioma=validate_idioma('v_idioma');
-        $r_observaciones=validate_observaciones('v_observaciones');
-        $r_aficion=validate_aficion('v_aficion');
+        $r_usuario=validate_usuario($v_usuario);
+        $r_password=validate_password($v_password);
+        $r_nombre=validate_nombre($v_nombre);
+        $r_DNI=validate_DNI($v_DNI);
+        $r_sexo=validate_sexo($v_sexo);
+        $r_fecha_nacimiento=validate_fecha($v_fecha_nacimiento);
+        $r_edad=validate_edad($v_edad);
+        $r_idioma=validate_idioma($v_idioma);
+        $r_observaciones=validate_observaciones($v_observaciones);
+        $r_aficion=validate_aficion($v_aficion);
         
         if($r_usuario !== 1){
             $error_usuario = " * El usuario introducido no es valido";
@@ -159,5 +159,5 @@
         }else{
             $error_aficion = "";
         }
-        return check;
+        return $check;
     }
