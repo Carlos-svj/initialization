@@ -51,23 +51,6 @@ function validate_Anyo_produccion(texto) {
   return false;
 }
 
-/* function validate_tipo(texto){ //si es coxe o moto
-    var i;
-    var ok=0;
-    for(i=0; i<texto.length;i++){
-        if(texto[i].checked){
-            ok=1
-        }
-    }
- 
-    if(ok==1){
-        return true;
-    }
-    if(ok==0){
-        return false;
-    }
-} */
-
 function validate_color(texto) {
   if (texto.length > 0) {
     return true;
@@ -97,14 +80,7 @@ function validate_precio(texto) {
   // }
 }
 
-/*
-function validate_observaciones(texto){
-    if (texto.length > 0){
-        return true;
-    }
-    return false;
-}
-*/
+
 function validate() {
   //te la returnsra el create
 
