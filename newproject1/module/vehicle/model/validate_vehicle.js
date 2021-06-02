@@ -184,5 +184,53 @@ function validate(){ //te la returnsra el create
 //     return true; 
     document.update_vehicle.submit();
     document.update_vehicle.action = "index.php?page=controller_vehicle&op=update";
-     
-}
+    //  implementar el ajax per a que arreplegue les dades i li xufles ahi a tope va 
+
+     $(document).ready(function () {
+
+        $('.id_vehicle').click(function () {
+            var id = this.getAttribute('id');
+// gastar
+            $ajax("module/vehicle/controller/controller_vehicle.php? op=read_modal&modal=" + id, function (data, status) {
+                var json = JSON.parse(data);
+                console.log(json);
+
+                if(json === 'error') {
+                    window.location.href='index.php?page=503';
+            
+                }else{
+                    console.log(json.id_vehicle);
+                    $("#id_vehicle").html(json.id_vehicle);
+                    $("#marca").html(json.id_vehicle);
+                    $("#modelo").html(json.id_vehicle);
+                    $("#HP").html(json.id_vehicle);
+                    $("#Km").html(json.id_vehicle);
+                    $("#Anyo_produccion").html(json.id_vehicle);
+                    $("#color").html(json.id_vehicle);
+                    $("#precio").html(json.id_vehicle);
+         
+                    $("#details_vehicle").show();
+                    $("#id_vehicle_modal").dialog({
+                        width: 850, 
+                        height: 500, 
+                        resizable: "false", 
+                        modal: "true", 
+                         buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        show: {
+                            effect: "blind",
+                            duration: 1000
+                        },
+                        hide: {
+                            effect: "explode",
+                            duration: 1000
+                        }
+                    });
+                }//end-else
+            
+            });
+        });
+    })};

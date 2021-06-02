@@ -98,6 +98,7 @@ switch ($_GET['op']) {
                 }
 
                 if ($rdo) {
+                    echo "<script>alert('ye klk')</script>";
                     echo '<script language="javascript">alert("Actualizado en la base de datos correctamente")</script>';
 
                     $callback = 'index.php?page=controller_vehicle&op=list'; //redirecció

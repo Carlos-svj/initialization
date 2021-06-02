@@ -9,7 +9,7 @@
                     <font color="red">
                         <span id="error_id_vehicle" class="error">
                             <?php  
-                                echo $error_id_vehicle;
+                                // echo $error_id_vehicle;
                             ?>
                         </span>
                 </td>
